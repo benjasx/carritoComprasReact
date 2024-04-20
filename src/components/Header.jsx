@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 
 export default function Header({car, removeFromCart, incrementQuantity, decementarQuantity, clearCart}) {
-    
+ 
     const isEmpty = useMemo( () => car.length === 0, [car])
     const cartotal = useMemo( () => car.reduce((total, item) => total + (item.quantity * item.price),0),[car])
     return(
